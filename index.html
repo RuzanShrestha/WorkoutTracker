@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Workout Tracker</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <div class="container">
     <header>
       <h1>Workout Tracker</h1>
-      <p class="subtitle">Custom Plan / Mobile</p>
     </header>
 
     <div class="top-bar">
@@ -21,14 +22,19 @@
       </select>
       <div class="btn-group">
         <button id="resetDayBtn">Reset Day</button>
-        <button class="clear-all-btn" id="clearAllBtn">Clear All</button>
+<button id="toggleSettings" class="opt-btn">Options</button>
+  </div>
+
+  <div id="settingsMenu" class="hidden-menu">
+    <button class="clear-all-danger" id="clearAllBtn">Clear All Data</button>
+  </div>
       </div>
     </div>
 
     <div id="exerciseList" class="exercise-list"></div>
     <p class="footer-note">Local Storage Active</p>
-  </div>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>

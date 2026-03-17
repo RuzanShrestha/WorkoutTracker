@@ -11,9 +11,8 @@ const workoutPlan = {
     { name: "Dumbbell Bench Press", type: "standard" }, // cite: 35
     { name: "Shoulder Press", type: "standard" }, // cite: 41
     { name: "Lateral Raises", type: "standard" }, // cite: 47
-    { name: "Rear Delt Fly", type: "standard" }, // cite: 53
-    { name: "Tricep Pushdown", type: "standard" }, // cite: 122
-    { name: "Skull Crushers", type: "standard" }, // cite: 124
+    { name: "Rear Delt Fly", type: "standard" },// cite: 53
+    { name: "triceps", type: "choice", options: ["Tricep Pushdowns", "Skull Crushers"] } ,
     { name: "Core (2 sets to failure)", type: "standard" } // cite: 156
   ],
   leg: [
@@ -85,7 +84,7 @@ function renderExerciseRow(name, data) {
                 onchange="toggleCheck('${name}', this.checked)">
         </label>
       </div>
-      <input type="text" class="pr-input" placeholder="Set PR (e.g. 50kg x 10)" 
+      <input type="text" class="pr-input" placeholder="Set PR (e.g. 67kg x 69)" 
              value="${data.pr || ''}" onblur="updatePR('${name}', this.value)">
     </div>
   `;
@@ -123,10 +122,20 @@ document.getElementById("resetDayBtn").onclick = () => {
   render();
 };
 
+// Toggle logic for the hidden menu
+document.getElementById("toggleSettings").onclick = function() {
+  const menu = document.getElementById("settingsMenu");
+  menu.classList.toggle("show");
+  
+  // Optional: Change button text to indicate it's open
+  this.innerText = menu.classList.contains("show") ? "Hide" : "Opt";
+};
+
+// Ensure your existing Clear All logic is still there
 document.getElementById("clearAllBtn").onclick = () => {
-  if(confirm("Erase all progress and PRs?")) {
+  if(confirm("Erase all progress and PRs? This cannot be undone.")) {
     Object.keys(workoutPlan).forEach(d => localStorage.removeItem(storageKey(d)));
-    render();
+    location.reload(); // Refresh to clear current state
   }
 };
 
