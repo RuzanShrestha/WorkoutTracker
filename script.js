@@ -1,22 +1,22 @@
 const workoutPlan = {
   pull: [
-    { name: "Dead Hang", type: "standard" }, // cite: 9
+    //{ name: "Dead Hang", type: "standard" }, // cite: 9
     { name: "Hyper Extension", type: "standard" }, // cite: 10
     { name: "Lats", type: "choice", options: ["Lat Pullover", "Lat Pulldown"] }, // cite: 13, 14
     { name: "Upper Back", type: "choice", options: ["Seated Cable Rows", "T-Bar Row"] }, // cite: 17, 18
-    { name: "Biceps", type: "choice", options: ["Preacher Curls", "Normal Curls", "Spider Curls"] }, // cite: 27, 29, 30
+    { name: "Biceps", type: "choice", options: ["Preacher Curls", "Normal Curls"] }, // cite: 27, 29, 30
     { name: "Core (2 sets to failure)", type: "standard" } // cite: 156
   ],
   push: [
-    { name: "Dumbbell Bench Press", type: "standard" }, // cite: 35
+    { name: "Chest", type: "choice", options:["Dumbbell Bench Press","Push Ups"] }, // cite: 35
     { name: "Shoulder Press", type: "standard" }, // cite: 41
     { name: "Lateral Raises", type: "standard" }, // cite: 47
     { name: "Rear Delt Fly", type: "standard" },// cite: 53
-    { name: "triceps", type: "choice", options: ["Tricep Pushdowns", "Skull Crushers"] } ,
+    { name: "triceps", type: "choice", options: ["Tricep Pushdowns", "Overhead Dumbbell Tricep Extension"] } ,
     { name: "Core (2 sets to failure)", type: "standard" } // cite: 156
   ],
   leg: [
-    { name: "Compound Lift", type: "choice", options: ["Leg Press", "Squats"] }, // cite: 128
+    { name: "Compound Lift", type: "choice", options: ["Leg Press", "Squats","Bulgarian Split Squats"] }, // cite: 128
     { name: "Knee Extension", type: "standard" }, // cite: 134
     { name: "Hip Thrusts", type: "standard" }, // cite: 136
     { name: "Hamstring Curls", type: "standard" }, // cite: 138
