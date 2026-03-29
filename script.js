@@ -17,6 +17,7 @@ const workoutPlan = {
   ],
   leg: [
     { name: "Compound Lift", type: "choice", options: ["Leg Press", "Squats","Bulgarian Split Squats"] }, // cite: 128
+    { name: "Step Up", type: "standard" }, 
     { name: "Knee Extension", type: "standard" }, // cite: 134
     { name: "Hip Thrusts", type: "standard" }, // cite: 136
     { name: "Hamstring Curls", type: "standard" }, // cite: 138
